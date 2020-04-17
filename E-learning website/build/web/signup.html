@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Signup page</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+        <script type="text/javascript">
+		function check()
+		{ 
+			if(document.getElementById("usernameid").value=="" && document.getElementById("emailid").value=="" && document.getElementById("passwordid").value=="")
+			{
+				alert("Please enter Username E-mail and Password");
+			}
+                        else if(document.getElementById("usernameid").value=="" && document.getElementById("emailid").value=="")
+                                alert("Please enter Username and E-mail");
+                        else if(document.getElementById("usernameid").value=="" && document.getElementById("passwordid").value=="")
+                                alert("Please enter Username and password");
+                        else if(document.getElementById("emailid").value=="" && document.getElementById("passwordid").value=="")
+                                alert("Please enter E-mail and Password");
+			else if(document.getElementById("usernameid").value=="")
+				alert("Please enter Username");
+			else if(document.getElementById("passwordid").value=="")
+				alert("Please enter Password");
+                        else if(document.getElementById("emailid").value=="")
+                                alert("Please enter Email");
+                        else
+                        {
+                            var y=document.getElementById("passwordid").value;
+                            var email= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                            if(email.test(x))
+                            {}
+                            else
+                            {
+                                    alert("enter valid email");
+                                    return false;
+                            }
+                        }
+                       
+		}
+	</script>
+</head>
+<body>
+	<img src="coursera3.jpg" class="expand">
+<div class="box">
+	<h1>Signup</h1>
+	<form action="./Signupservlet" method="post">
+		<div class="inputbox">
+			<input type="text" id="usernameid" name="username1" required="">
+			<label>Username</label>
+		</div>
+
+		<div class="inputbox">
+		<input type="text" id="emailid" name="email1" required="">
+		<label>E-mail</label>
+		</div>	
+		<div class="inputbox">
+                    <input type="password" id="passwordid" name="password1" required="">
+		<label>Password</label>
+		</div>	
+
+            <input type="submit" onclick="check();" value="Signup">
+	</form>
+
+</div>
+</body>
+</html>
+
+
+
+
+         
+   

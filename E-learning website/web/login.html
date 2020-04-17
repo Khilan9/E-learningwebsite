@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="login.css">
+        <script type="text/javascript">
+		function check()
+		{
+			if(document.getElementById("usernameid").value=="" && document.getElementById("passwordid").value=="")
+			{
+				alert("Please enter Username and Password");
+			}
+			else if(document.getElementById("usernameid").value=="")
+				alert("Please enter Username");
+			else if(document.getElementById("passwordid").value=="")
+				alert("Please enter Password");
+                        
+		}
+	</script>
+</head>
+<body>
+<img src="coursera3.jpg" class="expand">
+<div class="box">
+	<h1>Login</h1>
+	<form action="./Loginservlet" method="post">
+		<div class="inputbox">
+			<input type="text" name="username" id="usernameid" required="">
+			<label>Username</label>
+		</div>
+		<div class="inputbox">
+		<input type="password" name="password" id="passwordid" required="">
+		<label>Password</label>
+		</div>	
+
+	<input onclick="check()" type="submit" id="btnid" value="Login">
+	
+	</form>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+     
+        
